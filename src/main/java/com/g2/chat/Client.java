@@ -95,9 +95,12 @@ public class Client extends javax.swing.JFrame{
       
       writer.println(username + ": se conectou.:Connect");
       writer.flush();
+      
+      this.setTitle("Chat - " + username);
     }
     catch (Exception ex) {
         addText("Erro ao conectar.");
+        
     }
     
     ListenThread();
@@ -157,7 +160,7 @@ public class Client extends javax.swing.JFrame{
                  
                  
                  tp_chat.insertIcon(ResizeImage(image));
-                 addText(NEXT_LINE);
+//                 addText(NEXT_LINE);
                  addText(data[0] + ": Enviou a imagem");
               }
               else {
@@ -224,7 +227,7 @@ public class Client extends javax.swing.JFrame{
 
         btSend.setBackground(new java.awt.Color(40, 167, 69));
         btSend.setForeground(new java.awt.Color(255, 255, 255));
-        btSend.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felippe Neves\\Desktop\\jframe\\res\\drawable-xxhdpi\\ic_send.png")); // NOI18N
+        btSend.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ic_send.png"))); // NOI18N
         btSend.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btSend.setInheritsPopupMenu(true);
         btSend.addActionListener(new java.awt.event.ActionListener() {
@@ -235,7 +238,7 @@ public class Client extends javax.swing.JFrame{
 
         btPhoto.setBackground(new java.awt.Color(40, 167, 69));
         btPhoto.setForeground(new java.awt.Color(255, 255, 255));
-        btPhoto.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felippe Neves\\Desktop\\jframe\\image\\res\\drawable-xhdpi\\ic_library.png")); // NOI18N
+        btPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ic_library.png"))); // NOI18N
         btPhoto.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btPhoto.setInheritsPopupMenu(true);
         btPhoto.addActionListener(new java.awt.event.ActionListener() {
